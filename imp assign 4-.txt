@@ -1,0 +1,40 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+ _____ _           _   _      ____                       _        _ _
+| ____| | __ _ ___| |_(_) ___| __ )  ___  __ _ _ __  ___| |_ __ _| | | __
+|  _| | |/ _` / __| __| |/ __|  _ \ / _ \/ _` | '_ \/ __| __/ _` | | |/ /
+| |___| | (_| \__ \ |_| | (__| |_) |  __/ (_| | | | \__ \ || (_| | |   <
+|_____|_|\__,_|___/\__|_|\___|____/ \___|\__,_|_| |_|___/\__\__,_|_|_|\_\
+                                       Amazon Linux AMI
+
+This EC2 instance is managed by AWS Elastic Beanstalk. Changes made via SSH
+WILL BE LOST if the instance is replaced by auto-scaling. For more information
+on customizing your Elastic Beanstalk environment, see our documentation here:
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/customize-containers-ec2.html
+[ec2-user@ip-172-31-41-168 ~]$ aws configure
+AWS Access Key ID [None]: AKIAJFJYGQBAWPNXB6UA
+AWS Secret Access Key [None]: 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
+Default region name [None]: us-west-2
+Default output format [None]: json
+[ec2-user@ip-172-31-41-168 ~]$ python imp_4-5.py
+S3Connection:s3.amazonaws.com
+Creating new bucket with name: suyogs-6e47ae67-0c8b-4727-bd24-25b83016ed08
+2.10570883751
+imp_4-5.py:41: Warning: Incorrect integer value: '' for column 'ZIP_code' at row 1
+  cursor.execute('INSERT INTO customer_complaints VALUES (%s, %s,%s, %s,%s, %s,%s, %s,%s,%s,%s, %s,%s, %s)', (row[0],row[1],row[2],row[3],row[4],row[5],zi,row[7],d1,d2,row[10],row[11],row[12],row[13]))
+Time for inserting data
+103.725678921
+First 1000 Queries without using Memcached
+184.608963966
+First 1000 Queries using Memcached
+0.989544868469
+[ec2-user@ip-172-31-41-168 ~]$ python imp_4-5.py
+S3Connection:s3.amazonaws.com
+Creating new bucket with name: suyogs-37206e0d-326f-45da-89e2-a73d8f979dd1
+0.929385185242
+First 5000 Queries without using Memcached
+
+Broadcast message from root@ip-172-31-41-168
+        (unknown) at 6:06 ...
+
+The system is going down for power off NOW!
