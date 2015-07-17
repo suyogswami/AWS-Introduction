@@ -34,10 +34,10 @@ print 'Time for inserting into the bucket'
 print t3
 
 t4=time.time()
-db = MySQLdb.connect(host='aa1cljl2dz7ja45.cc1ekq787ymk.us-west-2.rds.amazonaws.com', port=3306, db='ebdb', user='suyogswami',passwd='suyogswami')
+db = MySQLdb.connect(host='', port=3306, db='', user='',passwd='')
 t4=time.time()
 
-conn = memcache.Client(['suyog.kvtrnn.cfg.usw2.cache.amazonaws.com:11211'])
+conn = memcache.Client([''])
 
 cursor=db.cursor()
 cursor.execute('create table customer_complaints(Complaint_ID INT,Product VARCHAR(255),Sub_product VARCHAR(255),Issue VARCHAR(255),Sub_issue VARCHAR(255),State VARCHAR(255),ZIP_code INT,Submitted_via VARCHAR(255),Date_received VARCHAR(255),Date_sent_to_company VARCHAR(255),Company VARCHAR(255),Company_response VARCHAR(255),Timely_response VARCHAR(10),Customer_disputed VARCHAR(10))')
